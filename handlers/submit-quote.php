@@ -24,6 +24,16 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     backToForm('error=1');
 }
 
+// Spam defence: honeypot field bots tend to auto-fill, and a minimum
+// fill time (real people take at least a couple of seconds). Both
+// checks fail silently — pretend success so bots don't adapt.
+$honeypot = trim((string) ($_POST['company_website'] ?? ''));
+$submittedAt = (int) ($_POST['ts'] ?? 0);
+$elapsed = time() - $submittedAt;
+if ($honeypot !== '' || $submittedAt === 0 || $elapsed < 3) {
+    toThankYou(clean($_POST['name'] ?? ''));
+}
+
 $name    = clean($_POST['name'] ?? '');
 $email   = clean($_POST['email'] ?? '');
 $phone   = clean($_POST['phone'] ?? '');

@@ -786,6 +786,7 @@ h4 { font-size: var(--text-md); }
 }
 .form-group textarea { resize: vertical; min-height: 110px; }
 .form-note { font-size: var(--text-xs); color: var(--color-text-muted); margin-top: var(--space-xs); }
+.hp-field { position: absolute; left: -9999px; top: -9999px; width: 1px; height: 1px; overflow: hidden; }
 .form-error { background: rgba(180,60,60,0.08); border: 1px solid rgba(180,60,60,0.3); color: #A83A3A; border-radius: var(--radius-sm); padding: var(--space-sm) var(--space-md); margin-bottom: var(--space-md); font-size: var(--text-sm); }
 
 @media (max-width: 900px) {

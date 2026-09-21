@@ -44,6 +44,11 @@ $error = isset($_GET['error']);
       <?php endif; ?>
 
       <form action="<?= $baseUrl ?>/handlers/submit-quote.php" method="POST">
+        <div class="hp-field" aria-hidden="true">
+          <label for="company_website">Leave this field empty</label>
+          <input type="text" id="company_website" name="company_website" tabindex="-1" autocomplete="off">
+        </div>
+        <input type="hidden" name="ts" value="<?= time() ?>">
         <div class="form-row">
           <div class="form-group">
             <label for="name">Full name</label>
