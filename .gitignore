@@ -1,0 +1,13 @@
+# Customer enquiry data — never commit real leads
+leads.csv
+
+# Local dev server config (hardcoded machine-specific PHP path)
+.claude/
+
+# OS/editor junk
+.DS_Store
+Thumbs.db
+*.log
+
+# Dependencies (none currently, but just in case)
+node_modules/

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://thefinancebureau.co.uk/</loc><priority>1.0</priority></url>
+  <url><loc>https://thefinancebureau.co.uk/about.php</loc><priority>0.6</priority></url>
+  <url><loc>https://thefinancebureau.co.uk/contact.php</loc><priority>0.8</priority></url>
+
+  <url><loc>https://thefinancebureau.co.uk/services/startup/</loc><priority>0.9</priority></url>
+  <url><loc>https://thefinancebureau.co.uk/services/startup/uk-business-formation.php</loc><priority>0.9</priority></url>
+  <url><loc>https://thefinancebureau.co.uk/services/startup/ltd-llp-self-employment.php</loc><priority>0.8</priority></url>
+
+  <url><loc>https://thefinancebureau.co.uk/services/accounting/</loc><priority>0.9</priority></url>
+  <url><loc>https://thefinancebureau.co.uk/services/accounting/uk-accountancy.php</loc><priority>0.9</priority></url>
+  <url><loc>https://thefinancebureau.co.uk/services/accounting/vat-paye-accounts-taxes.php</loc><priority>0.8</priority></url>
+
+  <url><loc>https://thefinancebureau.co.uk/services/artwork/</loc><priority>0.8</priority></url>
+  <url><loc>https://thefinancebureau.co.uk/services/artwork/stationery-business-essentials.php</loc><priority>0.7</priority></url>
+  <url><loc>https://thefinancebureau.co.uk/services/artwork/brochure-tariffs-reports.php</loc><priority>0.7</priority></url>
+  <url><loc>https://thefinancebureau.co.uk/services/artwork/ui-design.php</loc><priority>0.7</priority></url>
+  <url><loc>https://thefinancebureau.co.uk/services/artwork/digital-print-marketing-design.php</loc><priority>0.7</priority></url>
+
+  <url><loc>https://thefinancebureau.co.uk/services/marketing/</loc><priority>0.8</priority></url>
+  <url><loc>https://thefinancebureau.co.uk/services/marketing/social-media-marketing.php</loc><priority>0.7</priority></url>
+  <url><loc>https://thefinancebureau.co.uk/services/marketing/search-engine-marketing.php</loc><priority>0.7</priority></url>
+  <url><loc>https://thefinancebureau.co.uk/services/marketing/seo.php</loc><priority>0.7</priority></url>
+  <url><loc>https://thefinancebureau.co.uk/services/marketing/aeo-marketing.php</loc><priority>0.7</priority></url>
+
+  <url><loc>https://thefinancebureau.co.uk/privacy-policy.php</loc><priority>0.3</priority></url>
+  <url><loc>https://thefinancebureau.co.uk/terms.php</loc><priority>0.3</priority></url>
+</urlset>

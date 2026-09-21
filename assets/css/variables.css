@@ -1,0 +1,67 @@
+:root {
+  /* Colors — light theme, UK finance/professional */
+  --color-primary: #0B1E3D;
+  --color-primary-light: #16305C;
+  --color-primary-lighter: #1F3E73;
+  --color-accent: #C9A24B;
+  --color-accent-dark: #A9822E;
+  --color-accent-soft: #F3E8CC;
+
+  --color-bg: #F7F5F0;
+  --color-surface: #FFFFFF;
+  --color-border: #E4E0D8;
+
+  --color-text: #101319;
+  --color-text-muted: #495164;
+  --color-text-inverse: #F7F5F0;
+
+  --color-success: #2E7D5B;
+
+  /* Typography */
+  --font-heading: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Spacing scale */
+  --space-2xs: 0.4rem;
+  --space-xs: 0.8rem;
+  --space-sm: 1.2rem;
+  --space-md: 2rem;
+  --space-lg: 3.2rem;
+  --space-xl: 5.2rem;
+  --space-2xl: 8rem;
+
+  /* Radius / shadow */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --shadow-sm: 0 2px 10px rgba(11, 30, 61, 0.06);
+  --shadow-md: 0 12px 32px rgba(11, 30, 61, 0.10);
+  --shadow-lg: 0 24px 60px rgba(11, 30, 61, 0.14);
+
+  /* Layout */
+  --container-width: 1240px;
+  --nav-height: 84px;
+  --nav-height-scrolled: 68px;
+
+  /* Motion */
+  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 0.2s;
+  --duration-base: 0.4s;
+  --duration-slow: 0.7s;
+
+  /* Gradients */
+  --gradient-navy: linear-gradient(135deg, #0B1E3D 0%, #16305C 55%, #1F3E73 100%);
+  --gradient-gold: linear-gradient(135deg, #E4C578 0%, #C9A24B 60%, #A9822E 100%);
+
+  /* Type scale — one consistent scale, referenced everywhere instead of ad-hoc rem values */
+  --text-2xs: 0.8125rem;  /* 13px — micro labels */
+  --text-xs: 0.875rem;    /* 14px — captions, meta */
+  --text-sm: 1rem;        /* 16px — small UI text */
+  --text-base: 1.0625rem; /* 17px — default body */
+  --text-md: 1.1875rem;   /* 19px — lede / intro paragraphs */
+  --text-lg: 1.375rem;    /* 22px — card / component headings */
+  --text-xl: 1.625rem;    /* 26px — sub-section headings */
+  --text-2xl: 2.125rem;   /* 34px — h2 */
+  --text-3xl: 2.75rem;    /* 44px — page-hero h1 */
+  --text-4xl: 3.5rem;     /* 56px — home hero h1 ceiling */
+}
