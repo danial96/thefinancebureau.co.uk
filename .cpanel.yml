@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/thefinancebureau/public_html/
-    - /bin/cp -R * $DEPLOYPATH
+    - /usr/bin/rsync -a --exclude='.git' --exclude='.cpanel.yml' ./ $DEPLOYPATH
