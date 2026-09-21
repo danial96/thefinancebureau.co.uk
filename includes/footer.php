@@ -29,6 +29,6 @@
   </div>
 </footer>
 
-<script src="<?= $baseUrl ?? '' ?>/assets/js/main.js"></script>
+<script src="<?= $baseUrl ?? '' ?>/assets/js/main.js?v=<?= @filemtime(__DIR__ . '/../assets/js/main.js') ?: '1' ?>"></script>
 </body>
 </html>

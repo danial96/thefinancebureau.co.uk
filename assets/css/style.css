@@ -818,12 +818,24 @@ h4 { font-size: var(--text-md); }
   .footer-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
 
-  /* Mobile spacing scale — the desktop scale (up to 8rem section padding)
-     is far too loose on a small viewport; shrink the whole rhythm. */
+  /* Mobile spacing + type scale — the desktop scale (up to 8rem section
+     padding, 56px headings) is far too loose/large on a small viewport. */
   :root {
-    --space-lg: 1.8rem;
-    --space-xl: 2.4rem;
-    --space-2xl: 3.2rem;
+    --space-md: 1.5rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-2xl: 2.4rem;
+
+    --text-2xs: 0.75rem;
+    --text-xs: 0.8125rem;
+    --text-sm: 0.9375rem;
+    --text-base: 0.9375rem;
+    --text-md: 1.0625rem;
+    --text-lg: 1.1875rem;
+    --text-xl: 1.375rem;
+    --text-2xl: 1.625rem;
+    --text-3xl: 2rem;
+    --text-4xl: 2.5rem;
   }
 
   .container { padding: 0 var(--space-sm); }

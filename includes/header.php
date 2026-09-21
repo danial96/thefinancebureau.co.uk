@@ -1,4 +1,9 @@
 <?php
+// Prevent browsers/proxies from serving a stale page after a deploy —
+// HTML must always be revalidated; static assets (CSS/JS) are separately
+// cache-busted via a ?v= query param instead.
+header('Cache-Control: no-cache, must-revalidate');
+
 require_once __DIR__ . '/config.php';
 require_once __DIR__ . '/services-data.php';
 require_once __DIR__ . '/icons.php';
