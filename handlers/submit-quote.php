@@ -1,7 +1,8 @@
 <?php
-// Destination inbox for quote requests — update to the real business inbox before launch.
-const NOTIFY_EMAIL = 'info@thefinancebureau.co.uk';
-const LEADS_LOG     = __DIR__ . '/../leads.csv';
+require_once __DIR__ . '/../includes/config.php';
+require_once __DIR__ . '/../includes/mailer.php';
+
+const LEADS_LOG = __DIR__ . '/../leads.csv';
 
 function clean($value) {
     return trim(preg_replace('/[\r\n]+/', ' ', (string) $value));
@@ -44,17 +45,38 @@ if ($fh) {
     fclose($fh);
 }
 
-$subject = 'New enquiry: ' . $service;
-$body  = "New enquiry from The Finance Bureau website\n\n";
-$body .= "Name: {$name}\n";
-$body .= "Email: {$email}\n";
-$body .= "Phone: {$phone}\n";
-$body .= "Service: {$service}\n\n";
-$body .= "Message:\n{$message}\n";
+$firstName = explode(' ', $name)[0];
+$safeName = htmlspecialchars($name);
+$safeEmail = htmlspecialchars($email);
+$safePhone = htmlspecialchars($phone !== '' ? $phone : 'Not provided');
+$safeService = htmlspecialchars($service);
+$safeMessage = $message !== '' ? nl2br(htmlspecialchars($message)) : '<em style="color:#5B6472;">No message provided.</em>';
 
-$headers = "From: The Finance Bureau Website <" . NOTIFY_EMAIL . ">\r\n";
-$headers .= "Reply-To: {$name} <{$email}>\r\n";
+// Notify the business
+$staffSubject = 'New enquiry: ' . $service;
+$staffBody = '
+  <h2 style="margin:0 0 16px; font-family: Georgia, serif; color:#0B1E3D; font-size:20px;">New website enquiry</h2>
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="font-size:14px; margin-bottom:20px;">
+    <tr><td style="padding:6px 0; color:#5B6472; width:110px;">Name</td><td style="padding:6px 0; font-weight:bold;">' . $safeName . '</td></tr>
+    <tr><td style="padding:6px 0; color:#5B6472;">Email</td><td style="padding:6px 0;"><a href="mailto:' . $safeEmail . '" style="color:#0B1E3D;">' . $safeEmail . '</a></td></tr>
+    <tr><td style="padding:6px 0; color:#5B6472;">Phone</td><td style="padding:6px 0;">' . $safePhone . '</td></tr>
+    <tr><td style="padding:6px 0; color:#5B6472;">Service</td><td style="padding:6px 0;">' . $safeService . '</td></tr>
+  </table>
+  <p style="margin:0 0 8px; color:#5B6472; font-size:13px; text-transform:uppercase; letter-spacing:0.05em;">Message</p>
+  <p style="margin:0; padding:16px; background:#F7F5F0; border-radius:8px;">' . $safeMessage . '</p>
+';
+sendBrandedEmail(NOTIFY_EMAIL, $staffSubject, $staffBody, $email, $name);
 
-@mail(NOTIFY_EMAIL, $subject, $body, $headers);
+// Confirm receipt with the customer
+$customerSubject = 'Thanks for reaching out to The Finance Bureau';
+$customerBody = '
+  <h2 style="margin:0 0 16px; font-family: Georgia, serif; color:#0B1E3D; font-size:20px;">Thanks, ' . htmlspecialchars($firstName) . '.</h2>
+  <p>We\'ve received your enquiry about <strong>' . $safeService . '</strong> and our team will be in touch shortly, most clients hear back within minutes during business hours.</p>
+  <p>In the meantime, here\'s a quick recap of what you sent us:</p>
+  <p style="margin:0 0 20px; padding:16px; background:#F7F5F0; border-radius:8px;">' . $safeMessage . '</p>
+  <p style="margin:0;">If anything changes or you\'d like to add more detail, just reply directly to this email.</p>
+  <p style="margin:24px 0 0;">Best,<br>The Finance Bureau Team</p>
+';
+sendBrandedEmail($email, $customerSubject, $customerBody);
 
 toThankYou($name);
