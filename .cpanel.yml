@@ -1,7 +1,0 @@
----
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home/thefinancebureau/public_html/
-    - /bin/cp -R . $DEPLOYPATH
-    - /bin/rm -rf $DEPLOYPATH.git
-    - /bin/rm -f $DEPLOYPATH.cpanel.yml

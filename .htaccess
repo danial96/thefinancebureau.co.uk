@@ -1,5 +1,8 @@
 RewriteEngine On
 
+# Block access to .git — the repo is cloned directly into this folder
+RewriteRule (^|/)\.git(/|$) - [F,L]
+
 # Canonicalize: /index.php -> /
 RewriteCond %{THE_REQUEST} \s/+index\.php[\s?] [NC]
 RewriteRule ^index\.php$ / [R=301,L]
