@@ -3,6 +3,17 @@ RewriteEngine On
 # Block access to .git — the repo is cloned directly into this folder
 RewriteRule (^|/)\.git(/|$) - [F,L]
 
+# No caching at all for PHP pages while the site is under active
+# development — set at the Apache layer too, in case an upstream
+# proxy/cache reads this rather than the PHP-set header.
+<IfModule mod_headers.c>
+  <FilesMatch "\.php$">
+    Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+    Header set Pragma "no-cache"
+    Header set X-LiteSpeed-Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>
+
 # Canonicalize: /index.php -> /
 RewriteCond %{THE_REQUEST} \s/+index\.php[\s?] [NC]
 RewriteRule ^index\.php$ / [R=301,L]

@@ -6,6 +6,11 @@
 header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
 header('Pragma: no-cache');
 header('Expires: 0');
+// Hosting appears to sit behind an nginx/LiteSpeed cache layer that
+// strips standard headers — these are the directives those systems
+// look for specifically, in case one of them is actually in play.
+header('X-LiteSpeed-Cache-Control: no-cache');
+header('X-Accel-Expires: 0');
 
 require_once __DIR__ . '/config.php';
 require_once __DIR__ . '/services-data.php';
