@@ -11,3 +11,6 @@ Thumbs.db
 
 # Dependencies (none currently, but just in case)
 node_modules/
+
+# Stray downloads/archives that shouldn't be tracked
+*.zip
