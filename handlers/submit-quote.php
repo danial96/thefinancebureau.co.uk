@@ -72,7 +72,7 @@ $customerSubject = 'Thanks for reaching out to The Finance Bureau';
 $customerBody = '
   <h2 style="margin:0 0 16px; font-family: Georgia, serif; color:#0B1E3D; font-size:20px;">Thanks, ' . htmlspecialchars($firstName) . '.</h2>
   <p>We\'ve received your enquiry about <strong>' . $safeService . '</strong> and our team will be in touch shortly, most clients hear back within minutes during business hours.</p>
-  <p>In the meantime, here\'s a quick recap of what you sent us:</p>
+  <p style="margin:0 0 8px; color:#5B6472; font-size:13px; text-transform:uppercase; letter-spacing:0.05em;">What you told us</p>
   <p style="margin:0 0 20px; padding:16px; background:#F7F5F0; border-radius:8px;">' . $safeMessage . '</p>
   <p style="margin:0;">If anything changes or you\'d like to add more detail, just reply directly to this email.</p>
   <p style="margin:24px 0 0;">Best,<br>The Finance Bureau Team</p>
