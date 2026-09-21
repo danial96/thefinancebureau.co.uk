@@ -655,6 +655,31 @@ h4 { font-size: var(--text-md); }
 }
 .page-hero h1 { font-size: clamp(1.875rem, 2.2vw + 1rem, var(--text-3xl)); }
 .page-hero .lede { font-size: var(--text-md); max-width: 56ch; }
+
+/* ===== Thank-you page ===== */
+.thanks-icon {
+  width: 72px; height: 72px; border-radius: 50%;
+  background: var(--color-success); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto var(--space-md);
+  box-shadow: 0 12px 30px rgba(46,125,91,0.3);
+}
+.thanks-steps {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md);
+  margin-top: var(--space-xl); text-align: left;
+}
+.thanks-step { display: flex; gap: var(--space-sm); align-items: flex-start; }
+.thanks-step-num {
+  flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%;
+  background: var(--color-accent-soft); color: var(--color-accent-dark);
+  font-weight: 700; font-size: var(--text-sm);
+  display: flex; align-items: center; justify-content: center;
+}
+.thanks-step strong { display: block; color: var(--color-primary); font-size: var(--text-base); margin-bottom: 2px; }
+.thanks-step p { margin: 0; font-size: var(--text-sm); }
+@media (max-width: 760px) {
+  .thanks-steps { grid-template-columns: 1fr; }
+}
 .price-chip {
   display: inline-flex; align-items: center; gap: 8px;
   margin-top: var(--space-sm);
@@ -761,7 +786,6 @@ h4 { font-size: var(--text-md); }
 }
 .form-group textarea { resize: vertical; min-height: 110px; }
 .form-note { font-size: var(--text-xs); color: var(--color-text-muted); margin-top: var(--space-xs); }
-.form-success { display: flex; align-items: center; gap: 12px; background: rgba(46,125,91,0.1); border: 1px solid rgba(46,125,91,0.3); color: var(--color-success); border-radius: var(--radius-sm); padding: var(--space-sm) var(--space-md); margin-bottom: var(--space-md); font-weight: 600; font-size: var(--text-sm); }
 .form-error { background: rgba(180,60,60,0.08); border: 1px solid rgba(180,60,60,0.3); color: #A83A3A; border-radius: var(--radius-sm); padding: var(--space-sm) var(--space-md); margin-bottom: var(--space-md); font-size: var(--text-sm); }
 
 @media (max-width: 900px) {

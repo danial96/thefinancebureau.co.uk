@@ -13,6 +13,12 @@ function backToForm($status) {
     exit;
 }
 
+function toThankYou($name) {
+    $redirect = '../thank-you.php?name=' . urlencode($name);
+    header('Location: ' . $redirect);
+    exit;
+}
+
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     backToForm('error=1');
 }
@@ -51,4 +57,4 @@ $headers .= "Reply-To: {$name} <{$email}>\r\n";
 
 @mail(NOTIFY_EMAIL, $subject, $body, $headers);
 
-backToForm('sent=1');
+toThankYou($name);

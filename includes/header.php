@@ -17,6 +17,7 @@ $canonicalUrl = SITE_URL . $canonicalPath;
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><?= htmlspecialchars($resolvedTitle) ?></title>
 <meta name="description" content="<?= htmlspecialchars($resolvedDescription) ?>">
+<?php if (!empty($noIndex)): ?><meta name="robots" content="noindex, nofollow"><?php endif; ?>
 <link rel="canonical" href="<?= htmlspecialchars($canonicalUrl) ?>">
 <link rel="icon" type="image/svg+xml" href="<?= $baseUrl ?? '' ?>/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="<?= $baseUrl ?? '' ?>/favicon-32x32.png">

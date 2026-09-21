@@ -5,7 +5,6 @@ $pageDescription = 'Tell us what your business needs. No payment required, our t
 require __DIR__ . '/includes/header.php';
 
 $prefillService = isset($_GET['service']) ? trim($_GET['service']) : '';
-$sent = isset($_GET['sent']);
 $error = isset($_GET['error']);
 ?>
 
@@ -40,9 +39,6 @@ $error = isset($_GET['error']);
     </div>
 
     <div class="form-card" data-reveal data-reveal-delay="1">
-      <?php if ($sent): ?>
-        <div class="form-success"><?= icon('check', 18) ?> Thanks, your enquiry has been received. We'll be in touch shortly.</div>
-      <?php endif; ?>
       <?php if ($error): ?>
         <div class="form-error">Please check your name and email address and try again.</div>
       <?php endif; ?>
