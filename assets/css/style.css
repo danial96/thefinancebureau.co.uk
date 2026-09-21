@@ -817,4 +817,38 @@ h4 { font-size: var(--text-md); }
   .stat:first-child { border-top: none; padding-top: 0; }
   .footer-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
+
+  /* Mobile spacing scale — the desktop scale (up to 8rem section padding)
+     is far too loose on a small viewport; shrink the whole rhythm. */
+  :root {
+    --space-lg: 1.8rem;
+    --space-xl: 2.4rem;
+    --space-2xl: 3.2rem;
+  }
+
+  .container { padding: 0 var(--space-sm); }
+  .section-head { margin-bottom: var(--space-lg); }
+
+  /* Hero visual — simplify and shrink for small screens */
+  .hero { padding-top: calc(var(--nav-height) + var(--space-lg)); }
+  .hero-visual { min-height: 220px; }
+  .hero-orbit, .hero-center-badge { display: none; }
+  .hero-card { padding: var(--space-xs) var(--space-sm); gap: 8px; }
+  .hero-card .hc-ico { width: 28px; height: 28px; }
+  .hero-card strong { font-size: var(--text-base); }
+  .hero-card span { font-size: 0.7rem; }
+  .hero-card-3 { display: none; }
+  .hero-card-1 { top: 12%; left: 8%; }
+  .hero-card-2 { bottom: 14%; right: 6%; }
+
+  /* Simpler, more compact mobile nav panel */
+  .nav-links { padding: var(--space-sm); }
+  .nav-link { font-size: var(--text-base); }
+  .mega-item { padding: 8px; }
+  .mega-item span span { display: none; }
+}
+
+@media (max-width: 420px) {
+  .hero-visual { min-height: 180px; }
+  .hero-card strong { font-size: var(--text-sm); }
 }
