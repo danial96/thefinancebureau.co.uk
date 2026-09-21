@@ -7,7 +7,7 @@ require __DIR__ . '/includes/header.php';
 
 <section class="page-hero">
   <div class="container page-hero-inner">
-    <div class="breadcrumb"><a href="<?= $baseUrl ?>/index.php">Home</a><span class="sep">/</span><span>Privacy Policy</span></div>
+    <div class="breadcrumb"><a href="<?= $baseUrl ?>/">Home</a><span class="sep">/</span><span>Privacy Policy</span></div>
     <p class="eyebrow">Legal</p>
     <h1>Privacy Policy</h1>
     <p class="lede">Last updated: <?= date('F Y') ?></p>

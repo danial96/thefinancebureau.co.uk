@@ -36,7 +36,7 @@ $canonicalUrl = SITE_URL . $canonicalPath;
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="<?= $baseUrl ?? '' ?>/assets/css/style.css">
+<link rel="stylesheet" href="<?= $baseUrl ?? '' ?>/assets/css/style.css?v=<?= @filemtime(__DIR__ . '/../assets/css/style.css') ?: '1' ?>">
 <script type="application/ld+json">
 <?= json_encode([
     '@context' => 'https://schema.org',
@@ -53,7 +53,7 @@ $canonicalUrl = SITE_URL . $canonicalPath;
 
 <header class="site-header" id="siteHeader">
   <div class="nav-inner">
-    <a href="<?= $baseUrl ?? '' ?>/index.php" class="brand"><?= renderLogoMark(38) ?><span class="brand-word">The Finance <em>Bureau</em></span></a>
+    <a href="<?= $baseUrl ?? '' ?>/" class="brand"><?= renderLogoMark(38) ?><span class="brand-word">The Finance <em>Bureau</em></span></a>
 
     <nav class="nav-links" id="navLinks">
       <?php foreach ($services as $navCat): ?>
@@ -70,7 +70,7 @@ $canonicalUrl = SITE_URL . $canonicalPath;
           </div>
           <div class="mega-list">
             <?php foreach ($navCat['items'] as $item): ?>
-            <a class="mega-item" href="<?= $baseUrl ?? '' ?>/services/<?= $navCat['slug'] ?>/<?= $item['slug'] ?>.php">
+            <a class="mega-item" href="<?= $baseUrl ?? '' ?>/services/<?= $navCat['slug'] ?>/<?= $item['slug'] ?>">
               <span class="mega-item-icon"><?= icon('check', 14) ?></span>
               <span>
                 <strong><?= htmlspecialchars($item['label']) ?></strong>
@@ -82,13 +82,13 @@ $canonicalUrl = SITE_URL . $canonicalPath;
         </div>
       </div>
       <?php endforeach; ?>
-      <a href="<?= $baseUrl ?? '' ?>/about.php" class="nav-link">About</a>
-      <a href="<?= $baseUrl ?? '' ?>/contact.php" class="btn btn-primary mobile-cta">Get Started</a>
+      <a href="<?= $baseUrl ?? '' ?>/about" class="nav-link">About</a>
+      <a href="<?= $baseUrl ?? '' ?>/contact" class="btn btn-primary mobile-cta">Get Started</a>
     </nav>
 
     <div class="nav-cta">
-      <a href="<?= $baseUrl ?? '' ?>/contact.php" class="btn btn-ghost btn-sm">Contact</a>
-      <a href="<?= $baseUrl ?? '' ?>/contact.php" class="btn btn-primary btn-sm">Get Started</a>
+      <a href="<?= $baseUrl ?? '' ?>/contact" class="btn btn-ghost btn-sm">Contact</a>
+      <a href="<?= $baseUrl ?? '' ?>/contact" class="btn btn-primary btn-sm">Get Started</a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     </div>
   </div>

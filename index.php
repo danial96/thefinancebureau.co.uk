@@ -13,7 +13,7 @@ require __DIR__ . '/includes/header.php';
       <h1>Register your UK company, manage your accounts, and <em>grow your brand</em>.</h1>
       <p class="hero-sub">One Bureau, fixed prices, no agency markups. From company formation to accounting, design and marketing, we handle it end to end.</p>
       <div class="hero-actions">
-        <a href="<?= $baseUrl ?>/contact.php" class="btn btn-primary">Get Started Today</a>
+        <a href="<?= $baseUrl ?>/contact" class="btn btn-primary">Get Started Today</a>
         <a href="#services" class="btn btn-ghost">Explore Services</a>
       </div>
       <div class="hero-badges">
@@ -183,7 +183,7 @@ require __DIR__ . '/includes/header.php';
     <div class="cta-band" data-reveal>
       <h2>Ready to register your company?</h2>
       <p>It takes less than 10 minutes to tell us what you need. We'll take it from there.</p>
-      <a href="<?= $baseUrl ?>/contact.php" class="btn btn-accent">Get Started</a>
+      <a href="<?= $baseUrl ?>/contact" class="btn btn-accent">Get Started</a>
     </div>
   </div>
 </section>

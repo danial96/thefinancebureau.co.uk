@@ -32,8 +32,8 @@ $firstName = $name !== '' ? explode(' ', $name)[0] : '';
     </div>
 
     <div class="hero-actions" style="justify-content:center; margin-top: var(--space-lg);">
-      <a href="<?= $baseUrl ?>/index.php" class="btn btn-primary">Back to Home</a>
-      <a href="<?= $baseUrl ?>/index.php#services" class="btn btn-ghost">Explore Services</a>
+      <a href="<?= $baseUrl ?>/" class="btn btn-primary">Back to Home</a>
+      <a href="<?= $baseUrl ?>/#services" class="btn btn-ghost">Explore Services</a>
     </div>
   </div>
 </section>

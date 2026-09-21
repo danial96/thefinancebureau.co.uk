@@ -7,7 +7,7 @@ require __DIR__ . '/includes/header.php';
 
 <section class="page-hero">
   <div class="container page-hero-inner">
-    <div class="breadcrumb"><a href="<?= $baseUrl ?>/index.php">Home</a><span class="sep">/</span><span>About</span></div>
+    <div class="breadcrumb"><a href="<?= $baseUrl ?>/">Home</a><span class="sep">/</span><span>About</span></div>
     <p class="eyebrow">About The Finance Bureau</p>
     <h1>We don't just support UK businesses, we build them.</h1>
     <p class="lede">We started The Finance Bureau because we'd been through the frustration ourselves: five different agencies for formation, accounting, design and marketing, none of them talking to each other. We built the Bureau we wish we'd had.</p>
@@ -50,7 +50,7 @@ require __DIR__ . '/includes/header.php';
     <div class="cta-band" data-reveal>
       <h2>Ready to get started?</h2>
       <p>Tell us what your business needs. We'll take it from there.</p>
-      <a href="<?= $baseUrl ?>/contact.php" class="btn btn-accent">Get Started</a>
+      <a href="<?= $baseUrl ?>/contact" class="btn btn-accent">Get Started</a>
     </div>
   </div>
 </section>

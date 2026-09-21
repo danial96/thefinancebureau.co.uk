@@ -1,0 +1,16 @@
+RewriteEngine On
+
+# Canonicalize: /index.php -> /
+RewriteCond %{THE_REQUEST} \s/+index\.php[\s?] [NC]
+RewriteRule ^index\.php$ / [R=301,L]
+
+# Canonicalize: /foo.php -> /foo (GET/HEAD only — never redirect POST, it would drop form data)
+RewriteCond %{REQUEST_METHOD} !POST
+RewriteCond %{THE_REQUEST} \s/+(.+)\.php(\?\S*)?\s [NC]
+RewriteRule ^ /%1%2 [R=301,L]
+
+# Serve clean URLs by internally mapping to the matching .php file
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [L]

@@ -9,13 +9,13 @@ function clean($value) {
 }
 
 function backToForm($status) {
-    $redirect = '../contact.php?' . $status;
+    $redirect = '../contact?' . $status;
     header('Location: ' . $redirect);
     exit;
 }
 
 function toThankYou($name) {
-    $redirect = '../thank-you.php?name=' . urlencode($name);
+    $redirect = '../thank-you?name=' . urlencode($name);
     header('Location: ' . $redirect);
     exit;
 }

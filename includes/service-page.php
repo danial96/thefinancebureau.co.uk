@@ -25,7 +25,7 @@ require __DIR__ . '/header.php';
 <section class="page-hero">
   <div class="container page-hero-inner">
     <div class="breadcrumb">
-      <a href="<?= $baseUrl ?>/index.php">Home</a>
+      <a href="<?= $baseUrl ?>/">Home</a>
       <span class="sep">/</span>
       <a href="<?= $baseUrl ?>/services/<?= $service['catSlug'] ?>/"><?= htmlspecialchars($service['catLabel']) ?></a>
       <span class="sep">/</span>
@@ -38,7 +38,7 @@ require __DIR__ . '/header.php';
     <div class="price-chip"><?= icon('shield', 14) ?> <?= htmlspecialchars($service['price']) ?></div>
     <?php endif; ?>
     <div class="hero-actions" style="margin-top: var(--space-md);">
-      <a href="<?= $baseUrl ?>/contact.php?service=<?= urlencode($service['label']) ?>" class="btn btn-primary">Get Started</a>
+      <a href="<?= $baseUrl ?>/contact?service=<?= urlencode($service['label']) ?>" class="btn btn-primary">Get Started</a>
       <a href="<?= $baseUrl ?>/services/<?= $service['catSlug'] ?>/" class="btn btn-ghost">Back to <?= htmlspecialchars($service['catLabel']) ?></a>
     </div>
   </div>
@@ -85,7 +85,7 @@ require __DIR__ . '/header.php';
         <li><span class="fc-ico"><?= icon('bolt', 14) ?></span> Fast turnaround</li>
         <li><span class="fc-ico"><?= icon('users', 14) ?></span> Dedicated account manager</li>
       </ul>
-      <a href="<?= $baseUrl ?>/contact.php?service=<?= urlencode($service['label']) ?>" class="btn btn-primary">Get Started</a>
+      <a href="<?= $baseUrl ?>/contact?service=<?= urlencode($service['label']) ?>" class="btn btn-primary">Get Started</a>
       <div class="sidebar-divider"></div>
       <p class="sidebar-note">No payment required to enquire. We'll confirm scope and pricing with you first.</p>
     </aside>
@@ -97,7 +97,7 @@ require __DIR__ . '/header.php';
     <div class="cta-band" data-reveal>
       <h2>Ready to get started with <?= htmlspecialchars($service['label']) ?>?</h2>
       <p>Tell us what you need. We'll take it from there.</p>
-      <a href="<?= $baseUrl ?>/contact.php?service=<?= urlencode($service['label']) ?>" class="btn btn-accent">Get Started</a>
+      <a href="<?= $baseUrl ?>/contact?service=<?= urlencode($service['label']) ?>" class="btn btn-accent">Get Started</a>
     </div>
   </div>
 </section>

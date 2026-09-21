@@ -16,7 +16,7 @@ require __DIR__ . '/header.php';
 <section class="page-hero">
   <div class="container page-hero-inner">
     <div class="breadcrumb">
-      <a href="<?= $baseUrl ?>/index.php">Home</a>
+      <a href="<?= $baseUrl ?>/">Home</a>
       <span class="sep">/</span>
       <span><?= htmlspecialchars($cat['label']) ?></span>
     </div>
@@ -30,7 +30,7 @@ require __DIR__ . '/header.php';
   <div class="container">
     <div class="cat-grid">
       <?php foreach ($cat['items'] as $item): ?>
-      <a class="cat-card" href="<?= $baseUrl ?>/services/<?= $catSlug ?>/<?= $item['slug'] ?>.php" data-reveal>
+      <a class="cat-card" href="<?= $baseUrl ?>/services/<?= $catSlug ?>/<?= $item['slug'] ?>" data-reveal>
         <div class="service-icon"><?= icon($catIcons[$catSlug], 22) ?></div>
         <div>
           <h3><?= htmlspecialchars($item['label']) ?></h3>
@@ -48,7 +48,7 @@ require __DIR__ . '/header.php';
     <div class="cta-band" data-reveal>
       <h2>Not sure which <?= htmlspecialchars($cat['label']) ?> service you need?</h2>
       <p>Tell us about your business and we'll recommend the right fit.</p>
-      <a href="<?= $baseUrl ?>/contact.php" class="btn btn-accent">Talk to us</a>
+      <a href="<?= $baseUrl ?>/contact" class="btn btn-accent">Talk to us</a>
     </div>
   </div>
 </section>

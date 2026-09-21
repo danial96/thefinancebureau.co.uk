@@ -10,7 +10,7 @@ $error = isset($_GET['error']);
 
 <section class="page-hero">
   <div class="container page-hero-inner">
-    <div class="breadcrumb"><a href="<?= $baseUrl ?>/index.php">Home</a><span class="sep">/</span><span>Contact</span></div>
+    <div class="breadcrumb"><a href="<?= $baseUrl ?>/">Home</a><span class="sep">/</span><span>Contact</span></div>
     <p class="eyebrow">Get Started</p>
     <h1>Tell us what your business needs.</h1>
     <p class="lede">No payment details, no commitment. Just tell us what you're looking for and our team will reach out to confirm scope and pricing.</p>
