@@ -1,8 +1,11 @@
 <?php
-// Prevent browsers/proxies from serving a stale page after a deploy —
-// HTML must always be revalidated; static assets (CSS/JS) are separately
-// cache-busted via a ?v= query param instead.
-header('Cache-Control: no-cache, must-revalidate');
+// Prevent browsers/proxies from serving a stale page after a deploy.
+// no-store (not just no-cache) is what actually stops back/forward-cache
+// from restoring an old snapshot on browser back-navigation — static
+// assets (CSS/JS) are separately cache-busted via a ?v= query param.
+header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
+header('Pragma: no-cache');
+header('Expires: 0');
 
 require_once __DIR__ . '/config.php';
 require_once __DIR__ . '/services-data.php';
