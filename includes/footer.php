@@ -7,6 +7,7 @@
         <p>UK company formation, accounting, brand design and marketing. One Bureau, fixed pricing, no agency markups.</p>
         <div class="footer-contact">
           <a href="mailto:info@thefinancebureau.co.uk"><?= icon('mail', 16) ?> info@thefinancebureau.co.uk</a>
+          <a href="https://wa.me/<?= WHATSAPP_NUMBER ?>" target="_blank" rel="noopener"><?= icon('phone', 16) ?> +44 7308 504426</a>
         </div>
       </div>
       <?php foreach ($services as $cat): ?>

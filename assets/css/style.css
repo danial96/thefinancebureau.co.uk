@@ -564,7 +564,7 @@ h4 { font-size: var(--text-md); }
 .footer-grid { display: grid; grid-template-columns: 1.4fr repeat(4, 1fr); gap: var(--space-lg); margin-bottom: var(--space-lg); }
 .footer-brand .brand-word { color: #fff; }
 .footer-brand p { color: rgba(247,245,240,0.6); font-size: var(--text-sm); margin-top: var(--space-sm); max-width: 34ch; }
-.footer-contact { margin-top: var(--space-sm); }
+.footer-contact { margin-top: var(--space-sm); display: flex; flex-direction: column; gap: 8px; }
 .footer-contact a { display: inline-flex; align-items: center; gap: 8px; color: rgba(247,245,240,0.85); font-size: var(--text-sm); font-weight: 600; transition: color var(--duration-fast); }
 .footer-contact a:hover { color: var(--color-accent); }
 .footer-col h4 { color: #fff; font-family: var(--font-body); font-weight: 700; font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: var(--space-sm); padding-left: 12px; border-left: 2px solid var(--color-accent); }
