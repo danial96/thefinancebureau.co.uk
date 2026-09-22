@@ -29,7 +29,7 @@ $error = isset($_GET['error']);
         </div>
         <div class="contact-info-row">
           <span class="ico"><?= icon('phone', 18) ?></span>
-          <div><strong>Phone / WhatsApp</strong><span>+44 (0) 000 000 0000</span></div>
+          <div><strong>Phone / WhatsApp</strong><span><a href="https://wa.me/<?= WHATSAPP_NUMBER ?>" target="_blank" rel="noopener" style="color:inherit;">+44 7308 504426</a></span></div>
         </div>
         <div class="contact-info-row">
           <span class="ico"><?= icon('building', 18) ?></span>

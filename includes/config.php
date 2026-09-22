@@ -7,3 +7,7 @@ if (!defined('SITE_URL')) {
 if (!defined('NOTIFY_EMAIL')) {
     define('NOTIFY_EMAIL', 'info@thefinancebureau.co.uk');
 }
+// WhatsApp/phone contact number — digits only (no +, spaces) for wa.me links.
+if (!defined('WHATSAPP_NUMBER')) {
+    define('WHATSAPP_NUMBER', '447308504426');
+}
