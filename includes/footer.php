@@ -20,7 +20,7 @@
       <?php endforeach; ?>
     </div>
     <div class="footer-bottom">
-      <span>&copy; <?= date('Y') ?> The Finance Bureau. All rights reserved.</span>
+      <span>&copy; <?= date('Y') ?> The Finance Bureau, a subsidiary of Elite Design Hub Ltd. All rights reserved.</span>
       <span class="footer-legal">
         <a href="<?= $baseUrl ?? '' ?>/privacy-policy">Privacy Policy</a>
         <a href="<?= $baseUrl ?? '' ?>/terms">Terms</a>
