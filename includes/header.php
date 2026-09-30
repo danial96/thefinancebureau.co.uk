@@ -65,7 +65,7 @@ $canonicalUrl = SITE_URL . $canonicalPath;
 
 <header class="site-header" id="siteHeader">
   <div class="nav-inner">
-    <a href="<?= $baseUrl ?? '' ?>/" class="brand"><?= renderLogoMark(38, $baseUrl ?? '') ?><span class="brand-word">The Finance <em>Bureau</em></span></a>
+    <a href="<?= $baseUrl ?? '' ?>/" class="brand"><?= renderLogoLockup(40, $baseUrl ?? '') ?></a>
 
     <nav class="nav-links" id="navLinks">
       <?php foreach ($services as $navCat): ?>
