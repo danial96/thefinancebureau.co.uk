@@ -3,7 +3,7 @@
   <div class="container" style="position:relative;">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="<?= $baseUrl ?? '' ?>/" class="brand"><?= renderLogoMark(38) ?><span class="brand-word">The Finance <em>Bureau</em></span></a>
+        <a href="<?= $baseUrl ?? '' ?>/" class="brand"><?= renderLogoMark(38, $baseUrl ?? '') ?><span class="brand-word">The Finance <em>Bureau</em></span></a>
         <p>UK company formation, accounting, brand design and marketing. One Bureau, fixed pricing, no agency markups.</p>
         <div class="footer-contact">
           <a href="mailto:info@thefinancebureau.co.uk"><?= icon('mail', 16) ?> info@thefinancebureau.co.uk</a>

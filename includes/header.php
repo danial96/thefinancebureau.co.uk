@@ -32,7 +32,6 @@ $canonicalUrl = SITE_URL . $canonicalPath;
 <meta name="description" content="<?= htmlspecialchars($resolvedDescription) ?>">
 <?php if (!empty($noIndex)): ?><meta name="robots" content="noindex, nofollow"><?php endif; ?>
 <link rel="canonical" href="<?= htmlspecialchars($canonicalUrl) ?>">
-<link rel="icon" type="image/svg+xml" href="<?= $baseUrl ?? '' ?>/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="<?= $baseUrl ?? '' ?>/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="<?= $baseUrl ?? '' ?>/favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="<?= $baseUrl ?? '' ?>/apple-touch-icon.png">
@@ -66,7 +65,7 @@ $canonicalUrl = SITE_URL . $canonicalPath;
 
 <header class="site-header" id="siteHeader">
   <div class="nav-inner">
-    <a href="<?= $baseUrl ?? '' ?>/" class="brand"><?= renderLogoMark(38) ?><span class="brand-word">The Finance <em>Bureau</em></span></a>
+    <a href="<?= $baseUrl ?? '' ?>/" class="brand"><?= renderLogoMark(38, $baseUrl ?? '') ?><span class="brand-word">The Finance <em>Bureau</em></span></a>
 
     <nav class="nav-links" id="navLinks">
       <?php foreach ($services as $navCat): ?>
