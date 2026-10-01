@@ -3,7 +3,7 @@ $service = [
     'category' => 'artwork', 'catLabel' => 'Artwork', 'catSlug' => 'artwork', 'catIcon' => 'palette',
     'label' => 'UI Design',
     'tagline' => 'Modern UI/UX design for web & apps that\'s as functional as it is good-looking.',
-    'price' => 'From £600',
+    'price' => 'From £135',
     'intro' => [
         "Good UI design isn't just aesthetics. It's the difference between a visitor converting into a customer or bouncing within seconds. We design interfaces for websites and applications that are clear, on-brand, and built around how people actually use them.",
         "From early wireframes through to polished, developer-ready screens, we work closely with you so the end result matches both your brand and your users' expectations.",

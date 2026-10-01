@@ -3,7 +3,7 @@ $service = [
     'category' => 'artwork', 'catLabel' => 'Artwork', 'catSlug' => 'artwork', 'catIcon' => 'palette',
     'label' => 'Stationery & Business Essentials',
     'tagline' => 'The everyday brand assets that make a new company look like an established one.',
-    'price' => 'From £180',
+    'price' => 'From £99',
     'intro' => [
         "First impressions rarely come from your website. They come from an email signature, an invoice, or a business card handed over at a meeting. We design the everyday essentials your business needs, consistent with your brand from the very first document you send.",
         "Everything is delivered print-ready and digitally, so you're covered whether you're handing out cards or sending your hundredth invoice.",
