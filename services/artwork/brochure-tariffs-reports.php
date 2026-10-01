@@ -3,7 +3,7 @@ $service = [
     'category' => 'artwork', 'catLabel' => 'Artwork', 'catSlug' => 'artwork', 'catIcon' => 'palette',
     'label' => 'Brochure, Tariffs, Reports & More',
     'tagline' => 'Print-ready documents that represent your business as well as your best salesperson would.',
-    'price' => 'From £89',
+    'price' => 'Starting from £89',
     'intro' => [
         "A badly formatted price list or a cluttered brochure undermines a pitch before it's even read. We design the longer-form documents your business relies on: brochures, price and tariff sheets, proposals and reports, so they read clearly and look the part.",
         "Whether it's a one-off proposal or a tariff sheet you'll reuse for years, we design it to match your brand and hand over source files so you can keep it updated.",
